@@ -55,3 +55,36 @@ webdriver-manager update
 ![image](https://user-images.githubusercontent.com/46487696/117842399-84a4cd00-b29b-11eb-9170-3e0606716cd5.png)
 ![image](https://user-images.githubusercontent.com/46487696/117842465-95554300-b29b-11eb-948d-c1b747a42707.png)
 
+
+## Automating Angular website using CLI -BASIC
+
+First, Go to the basic project available in protrator directory.
+
+Path in my System => C:\Users\Dell\AppData\Roaming\npm\node_modules\protractor\example
+
+Open CMD and go to this particular path tu run the test cases for the angular websites.
+
+Website here is taken=> "https://angularjs.org/" 
+
+Here, example_spec.js file consists the test cases while conf.js consist the configuration how to run the test cases like name of the browser.
+
+```
+Command:
+
+protractor conf.js
+```
+**Source Code =>**
+
+![image](https://user-images.githubusercontent.com/46487696/117854317-03533780-b2a7-11eb-9140-9e64f6ed9df1.png)
+![image](https://user-images.githubusercontent.com/46487696/117854382-0fd79000-b2a7-11eb-9486-530c8410491d.png)
+
+**OutPut=>**
+
+First, cmd command
+![image](https://user-images.githubusercontent.com/46487696/117854618-49a89680-b2a7-11eb-9592-8a8c386594eb.png)
+
+Second, script execution results
+
+![image](https://user-images.githubusercontent.com/46487696/117854679-59c07600-b2a7-11eb-8da6-2579fe8be1d6.png)
+![image](https://user-images.githubusercontent.com/46487696/117854908-91c7b900-b2a7-11eb-97f1-31d048f92706.png)
+
