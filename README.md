@@ -81,10 +81,12 @@ protractor conf.js
 **OutPut=>**
 
 First, cmd command
-![image](https://user-images.githubusercontent.com/46487696/117854618-49a89680-b2a7-11eb-9592-8a8c386594eb.png)
+
+![image](https://user-images.githubusercontent.com/46487696/117858070-1d8f1480-b2ab-11eb-952a-bbb76b962e7d.png)
 
 Second, script execution results
 
-![image](https://user-images.githubusercontent.com/46487696/117854679-59c07600-b2a7-11eb-8da6-2579fe8be1d6.png)
+![image](https://user-images.githubusercontent.com/46487696/117858095-24b62280-b2ab-11eb-8543-9258eb0edf25.png)
+
 ![image](https://user-images.githubusercontent.com/46487696/117854908-91c7b900-b2a7-11eb-97f1-31d048f92706.png)
 
