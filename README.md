@@ -90,3 +90,30 @@ Second, script execution results
 
 ![image](https://user-images.githubusercontent.com/46487696/117854908-91c7b900-b2a7-11eb-97f1-31d048f92706.png)
 
+
+## Protractor Framework on Visual Studio Code:
+
+Prerequisite:<br/>
+IDE - "Integrated Development Environment"
+
+Download and Setup Visual Studio Code <br/>
+[Download VSC](https://code.visualstudio.com/docs/?dv=win)
+
+After setup install support for JavaScript & Typescript in Visual Studio Code.
+
+Now, Create a directory and open in VSC. Inside that create two Folder i.e conf and tests <br/>
+Earlier we discuss an default example provided by angular community. We will run the same example using this IDE we setup with built-in CMD.<br/>
+Go to the default example location. In my system location is "C:\Users\Dell\AppData\Roaming\npm\node_modules\protractor\example" and store the configuration and testing file accordingly show below.
+
+![image](https://user-images.githubusercontent.com/46487696/118138629-2fe08e00-b424-11eb-93d7-84f35f5c41c2.png)
+![image](https://user-images.githubusercontent.com/46487696/118138658-3969f600-b424-11eb-971c-69d5febfee1b.png)
+
+Open CMD in Visual studio code and run the script for automate testing.
+```
+Command:
+        protractor .\conf\conf.js
+```
+
+![image](https://user-images.githubusercontent.com/46487696/118138794-59011e80-b424-11eb-8ca5-093ba97ab7ca.png)
+
+
