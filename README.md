@@ -118,3 +118,6 @@ Command:
 
 [Click Here for the Source Code](https://github.com/kushagra67414/Protractor_Angular_Automation/tree/main/ProtractorDemo)
 
+
+[Jasmine Cheat sheet](https://devhints.io/jasmine)
+[Protractor API Doc](https://www.protractortest.org/#/api)
