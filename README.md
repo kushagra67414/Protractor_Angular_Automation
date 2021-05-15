@@ -121,3 +121,35 @@ Command:
 
 [Jasmine Cheat sheet](https://devhints.io/jasmine)
 [Protractor API Doc](https://www.protractortest.org/#/api)
+
+
+## Testing A Angular website using Protractor
+
+Website => [Super Calculator](http://juliemr.github.io/protractor-demo/)<br/>
+
+First, Create a calculator.js file to write the test cases. let's save this file inside test directory. <br/>
+Second, create conf.js file to configure jasmine framework and call the test file.  <br/>
+
+![image](https://user-images.githubusercontent.com/46487696/118362447-2d5d7000-b5ad-11eb-8fb8-aee3467e4e9e.png)
+
+```
+Source Code =>
+describe('Demo calculator test',function(){
+    it('Addition Test', function(){
+        browser.get('http://juliemr.github.io/protractor-demo/');
+        element(by.model('first')).sendKeys('3');
+        element(by.model('second')).sendKeys('2');
+        element(by.css('[ng-click="doAddition()"]')).click();
+        let result = element(by.cssContainingText('.ng-binding', '5'));
+        expect(result.getText()).toEqual('5');
+        browser.sleep(5000);
+        
+    });
+});
+```
+
+In above Source Code, we have write the test case for an addtion similar can be go for substraction and so on. <br/>
+Now, Go on cmd inside your VCS and use command **"protractor .\conf\conf.js"** and run it.<br/>
+If test case is successful we will see a greene dot in console.<br/>
+
+![image](https://user-images.githubusercontent.com/46487696/118362497-5c73e180-b5ad-11eb-9bf4-6b40b70f3304.png)
