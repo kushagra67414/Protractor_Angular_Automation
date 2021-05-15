@@ -153,3 +153,40 @@ Now, Go on cmd inside your VCS and use command **"protractor .\conf\conf.js"** a
 If test case is successful we will see a greene dot in console.<br/>
 
 ![image](https://user-images.githubusercontent.com/46487696/118362497-5c73e180-b5ad-11eb-9bf4-6b40b70f3304.png)
+
+
+## Locators in Protractor:
+
+1. some global functions protractor exposed. <br/>
+a.element<br/>
+b.element.all<br/>
+
+Let's take an Example of Super calculator website.<br/>
+
+![image](https://user-images.githubusercontent.com/46487696/118362860-26cff800-b5af-11eb-805f-868cbb780f61.png)
+
+Here if have to enter a value in first box we have to inspect it and find that element using locators.<br/>
+one of the locator is **model**<br/>
+
+![image](https://user-images.githubusercontent.com/46487696/118362847-0c961a00-b5af-11eb-861b-79c30965e722.png)
+
+```
+Syntax =>
+element(by.model('first')).sendKeys('3');  // here first is value of ng-model
+```
+  
+[To learn more about Locators Click Here](https://www.protractortest.org/#/locators)
+
+
+**Note =>**
+If want to know about best locator for that particular element we can use a chrome extention i.e. ""**POM Builder – Auto-generate CSS/XPath Locator**""<br/>
+
+![image](https://user-images.githubusercontent.com/46487696/118362984-d1481b00-b5af-11eb-82e9-6b4b663cc07b.png)
+
+Click on suggested locator and copy it in your file. we will see thats the best locator for that WebElement.<br/>
+
+Second Extention is **"Protractor recorder"** here if we do some task on that websites it records it and generate the test case. It's an old extention so it might not be an optimum solution. <br/>
+
+Third Extention is "Selenium IDE" it is also same as Protractor recorder but most useful and reliable and stable. <br/>
+
+[Protractor Cheatsheet API](https://gist.github.com/javierarques/0c4c817d6c77b0877fda)
