@@ -190,3 +190,80 @@ Second Extention is **"Protractor recorder"** here if we do some task on that we
 Third Extention is "Selenium IDE" it is also same as Protractor recorder but most useful and reliable and stable. <br/>
 
 [Protractor Cheatsheet API](https://gist.github.com/javierarques/0c4c817d6c77b0877fda)
+
+
+## POM in Protractor => <br/>
+Page Object Model (POM) is a design pattern that creates an Object Repository for web UI elements and is widely used in test automation. The model has the advantage of reducing code duplication and improving test maintenance.<br/>
+
+Here => <br/>
+1. We separate objects/element locators and actions in separate files.<br/>
+2. Test Scripts can refer element locators and actions from these files.<br/>
+
+Lets create a file by name pom.js inside page directory. Follow the below structure 
+![image](https://user-images.githubusercontent.com/46487696/118395236-dc11b700-b666-11eb-803e-e84195d40545.png)
+![image](https://user-images.githubusercontent.com/46487696/118395253-e92ea600-b666-11eb-9b65-a3ad7c35a2de.png)
+
+**pom.js** source Code => (locators and actions are defined here)
+```
+let pom = function(){
+
+   let firstnumber_input =  element(by.model('first'));
+   let secondnumber_input =  element(by.model('second'));
+    let gobutton = element(by.css('[ng-click="doAddition()"]'));
+    this.get = function(url){
+        browser.get(url);
+    };
+    this.enterFirstNumber = function(firstno){
+        firstnumber_input.sendKeys(firstno);
+    };
+   
+    this.enterSecondNumber = function(secondNo){
+       secondnumber_input.sendKeys(secondNo);
+    };
+    this.clicGo = function(){
+        gobutton.click();
+    };
+    this.VerifyResult = function(output){
+        let result = element(by.cssContainingText('.ng-binding', output));
+        expect(result.getText()).toEqual(output);
+        console.log('frefrvgr');
+    };
+};
+
+module.exports = new pom();
+```
+
+**calculator.js** =>
+```
+let pom = require('../Page/pom');
+
+describe('Demo calculator test',function(){
+    it('Addition Test', function(){
+        // browser.get('http://juliemr.github.io/protractor-demo/');
+      pom.get('http://juliemr.github.io/protractor-demo/');
+
+        // element(by.model('first')).sendKeys('3');
+      pom.enterFirstNumber('5');
+
+
+
+        // element(by.model('second')).sendKeys('2');
+      pom.enterSecondNumber('5');
+        
+      // element(by.css('[ng-click="doAddition()"]')).click();
+        pom.clicGo();
+
+        pom.VerifyResult('10');
+        browser.sleep(5000);
+        
+    });
+});
+```
+
+IF here after adding two numbers the ouptut is same as expected by user. the test case will pass.<br/>
+Or say if test case doesn't meet the required conditions.
+
+![image](https://user-images.githubusercontent.com/46487696/118395357-986b7d00-b667-11eb-8d14-194e54bc37c8.png)
+
+If test case passes it shows a green dot which indicates all the test cases have been successsed.
+![image](https://user-images.githubusercontent.com/46487696/118395376-b507b500-b667-11eb-9758-0f735f2db0c5.png)
