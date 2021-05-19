@@ -270,3 +270,60 @@ If test case passes it shows a green dot which indicates all the test cases have
 
 
 [Click Here To Go To Project](https://github.com/kushagra67414/Protractor_Angular_Automation/tree/main/Protractor-POM)
+
+
+##  Report Generator and Screenshot in Protractor:
+Reporter for Protractor that will capture a screenshot after each executed test case and store the results in a HTML report.<br>
+
+First, Download the dependencies for both using CLI.<br>
+[Click here for doc](https://www.npmjs.com/package/protractor-jasmine2-screenshot-reporter)<br>
+OR<br>
+use this command => **npm install protractor-jasmine2-screenshot-reporter --save-dev**
+
+![image](https://user-images.githubusercontent.com/46487696/118793893-abc05780-b8b6-11eb-9af9-b52f0e95d1d0.png)
+
+Second, Open VSC and configure your configuration file.<br>
+Configurations:
+```
+var HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
+
+var reporter = new HtmlScreenshotReporter({
+  dest: 'target/screenshots',
+  filename: 'my-report.html'
+});
+
+exports.config = {
+  // ...
+
+  // Setup the report before any tests start
+  beforeLaunch: function() {
+    return new Promise(function(resolve){
+      reporter.beforeLaunch(resolve);
+    });
+  },
+
+  // Assign the test reporter to each running instance
+  onPrepare: function() {
+    jasmine.getEnv().addReporter(reporter);
+  },
+
+  // Close the report after all tests finish
+  afterLaunch: function(exitCode) {
+    return new Promise(function(resolve){
+      reporter.afterLaunch(resolve.bind(this, exitCode));
+    });
+  }
+}
+```
+
+![image](https://user-images.githubusercontent.com/46487696/118793749-85022100-b8b6-11eb-8e16-1b2935e0ea87.png)
+
+Third, After adding open terminal in VSC and run conf.js file in Built-in CLI.
+
+![image](https://user-images.githubusercontent.com/46487696/118794166-ee822f80-b8b6-11eb-8ac4-927fa348ceed.png)
+
+**Report Generated**
+
+![image](https://user-images.githubusercontent.com/46487696/118794329-1a051a00-b8b7-11eb-9a61-0f7def6391aa.png)
+![image](https://user-images.githubusercontent.com/46487696/118794401-2be6bd00-b8b7-11eb-9979-04f3c49d961e.png)
+![image](https://user-images.githubusercontent.com/46487696/118794447-36a15200-b8b7-11eb-85e5-36f98d812557.png)
