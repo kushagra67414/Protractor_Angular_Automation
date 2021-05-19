@@ -330,3 +330,59 @@ Third, After adding open terminal in VSC and run conf.js file in Built-in CLI.
 
 
 [Click Here For the Source Code](https://github.com/kushagra67414/Protractor_Angular_Automation/tree/main/Protractor-ReportGenerator)
+
+
+## Allure Report Generator:
+
+**First**, Download dependency in CLI.<br>
+[Click Here For Doc](https://www.npmjs.com/package/jasmine-allure-reporter)<br>
+OR<br>
+type => **npm i jasmine-allure-reporter**<br>
+
+![image](https://user-images.githubusercontent.com/46487696/118816786-29dd2800-b8d0-11eb-9edc-ecd3e90927ee.png)
+
+
+**Second**, Configure your conf.js to call the allure report generator.<br>
+```
+ var AllureReporter = require('jasmine-allure-reporter');
+    jasmine.getEnv().addReporter(new AllureReporter({
+      resultsDir: 'allure-results'
+    }));
+```
+
+Add above configuration in onPrepare method present in conf.js<br>
+![image](https://user-images.githubusercontent.com/46487696/118816696-116d0d80-b8d0-11eb-9890-93146bb92856.png)
+
+
+**Third**, check allure-reports are generated or not:<br>
+
+![image](https://user-images.githubusercontent.com/46487696/118817736-2c8c4d00-b8d1-11eb-98fb-2eba82ee2103.png)
+
+In above output, we can see the allure-report directory has been generated and the report generates is in xml Document.<br>
+
+**Fourth**, To generate allure report in HTML extension add "allure command line tool"<br>
+
+[Click Here For Doc](https://www.npmjs.com/package/allure-commandline)<br>
+OR <br>
+type => npm i allure-commandline<br>
+
+**Notes:**<br>
+For this allure command line tool we need java 8 or above version<br>
+
+![image](https://user-images.githubusercontent.com/46487696/118818766-4b3f1380-b8d2-11eb-876b-fade2abf7ea7.png)
+
+**Fifth**, Now go to the allure report directory in my local machine path is "C:\Users\Dell\Desktop\Protractor & Angular\Protractor-POM\allure-results"<br>
+From here open CMD upto this above path and to generate HTML report use below command.<br>
+```
+allure serve C:\Users\Dell\Desktop\Protractor & Angular\Protractor-POM\allure-results -o "C:\Users\Dell\Desktop\Protractor & Angular\Protractor-POM\"
+```
+
+OR go upto "C:\Users\Dell\Desktop\Protractor & Angular\Protractor-POM\" and follow
+```
+allure server
+```
+**Notes**
+Here, -o represent the location where we want to store HTML report file. By default it will store in allure generated directory.<br>
+
+![image](https://user-images.githubusercontent.com/46487696/118820773-3499bc00-b8d4-11eb-95a8-7fa7938a8080.png)
+
