@@ -386,3 +386,34 @@ Here, -o represent the location where we want to store HTML report file. By defa
 
 ![image](https://user-images.githubusercontent.com/46487696/118820773-3499bc00-b8d4-11eb-95a8-7fa7938a8080.png)
 
+
+
+## Integration with github:
+
+
+First, go to file > Add folder to workspace> select folder which wanna integrate with git&github.<br>
+Second, go to source control or ctrl+shift+G and initialize the repository.<br>
+
+![image](https://user-images.githubusercontent.com/46487696/118936345-18485e80-b96a-11eb-8da2-fddbd3b54e21.png)
+
+![image](https://user-images.githubusercontent.com/46487696/118936421-28603e00-b96a-11eb-9bbf-e1a016a27ee4.png)
+
+Now, you will see the add initialized and uncommit. before that we can add file to .gitignore which we do not want to push. just right click and click on add to .gitignore.
+
+![image](https://user-images.githubusercontent.com/46487696/118937387-1d59dd80-b96b-11eb-89bb-2f4361444a68.png)
+
+You, will see .gitignore file has been created
+
+![image](https://user-images.githubusercontent.com/46487696/118937440-2ea2ea00-b96b-11eb-8b4a-39a31e1d9689.png)
+
+Click at push button present at right side of the branch name or right click and then push it.
+
+![image](https://user-images.githubusercontent.com/46487696/118938662-842bc680-b96c-11eb-970a-9de6bb151e57.png)
+
+
+Go to your github we see our repository has been deployed. <br>
+[Click Here](https://github.com/kushagra67414/Protractor-POM) <br>
+OR <br>
+https://github.com/kushagra67414/Protractor-POM   <br>
+
+![image](https://user-images.githubusercontent.com/46487696/118941247-26e54480-b96f-11eb-83f8-ec60aee53cc1.png)
