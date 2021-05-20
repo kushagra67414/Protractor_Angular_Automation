@@ -468,6 +468,9 @@ a. provide github repository to fetch source code. <br>
 b. command to activate the protractor. <br>
 c. path where to store the allure-reports <br>
 
+Github Repository: <br>
+https://github.com/kushagra67414/Protractor-POM
+
 Configurations:
 
 ![image](https://user-images.githubusercontent.com/46487696/118985502-1eefc980-b99c-11eb-9ea7-5c7e14ba9499.png)
